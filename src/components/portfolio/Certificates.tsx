@@ -123,13 +123,13 @@ export function Certificates() {
                   alt={selected.title}
                   className="w-full object-cover"
                 />
-              </div>
+              </div>                  
             )}
 
            
           </div>
-        </div>
+        </div>                            
       )}
-    </section>
+    </section>               
   );
 }
