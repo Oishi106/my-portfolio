@@ -9,15 +9,15 @@ export function Certificates() {
   const [selected, setSelected] = useState<Certificate | null>(null);
 
   return (
-    <section id="certificates" className="relative py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="certificates" className="relative py-24 sm:py-28 ">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
         <SectionHeading
           eyebrow="Certificates"
           title="Credentials & achievements"
           subtitle="Continuous learning is part of the craft."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certificates.map((c, i) => (
             <Reveal key={c.title} delay={(i % 4) * 0.08}>
               <div
@@ -27,41 +27,48 @@ export function Certificates() {
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") setSelected(c);
                 }}
-                className="group flex h-full cursor-pointer flex-col rounded-3xl glass border border-border card-glow p-6 transition-all hover:-translate-y-1.5 hover:border-primary/40"
+                className="group cursor-pointer flex flex-col rounded-3xl glass-strong border border-border hover:border-accent/60 card-glow overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,180,255,0.08)]"
               >
-                <div className="flex items-start justify-between">
-                  <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-2xl bg-gradient-primary text-primary-foreground shadow-[var(--shadow-glow)]">
-                    {c.image ? (
-                      <img
-                        src={c.image}
-                        alt=""
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.style.display = "none";
-                        }}
-                      />
-                    ) : (
-                      <Award className="h-6 w-6" />
-                    )}
-                  </span>
-                  <button
-                    type="button"
-                    aria-label={`View ${c.title} certificate`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelected(c);
-                    }}
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </button>
+                {/* larger image/banner */}
+                <div className="h-40 md:h-44 w-full overflow-hidden bg-muted">
+                  {c.image ? (
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-primary text-primary-foreground">
+                      <Award className="h-8 w-8" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="mt-5 font-display text-base font-semibold leading-snug">
-                  {c.title}
-                </h3>
-                <p className="mt-1 text-sm text-gradient">{c.issuer}</p>
-                <p className="mt-auto pt-4 text-xs text-muted-foreground">{c.date}</p>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="font-display text-lg font-semibold leading-snug">{c.title}</h3>
+                      <p className="mt-1 text-sm text-gradient">{c.issuer}</p>
+                    </div>
+                    <button
+                      type="button"
+                      aria-label={`View ${c.title} certificate`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelected(c);
+                      }}
+                      className="text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                    </button>
+                  </div>
+
+                  <p className="mt-4 text-xs text-muted-foreground">{c.date}</p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -79,9 +86,9 @@ export function Certificates() {
 
           {/* Content */}
           <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-lg rounded-3xl glass border border-border p-6 shadow-2xl sm:p-8"
-          >
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl rounded-3xl glass border border-border p-6 shadow-2xl sm:p-8"
+            >
             <button
               type="button"
               aria-label="Close"
@@ -121,9 +128,9 @@ export function Certificates() {
                 <img
                   src={selected.image}
                   alt={selected.title}
-                  className="w-full object-cover"
+                  className="w-full max-h-[60vh] object-contain"
                 />
-              </div>                  
+              </div>
             )}
 
            

@@ -106,7 +106,7 @@ export function Contact() {
                   href={c.href}
                   className="flex items-center gap-4 rounded-2xl glass border border-border card-glow p-5 transition-all hover:-translate-y-1 hover:border-primary/40"
                 >
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-primary text-primary-foreground border border-accent/30 shadow-[var(--shadow-glow)]">
                     <c.icon className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
@@ -118,14 +118,16 @@ export function Contact() {
               <GlassCard hover={false} className="mt-auto">
                 <p className="text-sm font-medium">Find me online</p>
                 <div className="mt-3 flex gap-3">
-                  {socials.map((s) => (
+                  {socials.map((s, i) => (
                     <a
                       key={s.label}
                       href={s.href}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={s.label}
-                      className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-muted text-muted-foreground transition-all hover:-translate-y-1 hover:text-foreground"
+                      className={`grid h-10 w-10 place-items-center rounded-xl border border-accent/30 bg-muted text-muted-foreground social-animate ${
+                        i % 2 === 0 ? "social-float" : ""
+                      }`}
                     >
                       <s.icon className="h-4 w-4" />
                     </a>

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
-import { Menu, X, Moon, Sun, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { navLinks } from "@/lib/portfolio-data";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
-import { useTheme } from "@/hooks/use-theme";
 import { cn } from "@/lib/utils";
 
 function scrollToId(id: string) {
@@ -14,7 +13,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const active = useScrollSpy(navLinks.map((l) => l.id));
-  const { theme, toggle } = useTheme();
+  // theme toggle removed — dark-only design
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 });
 
@@ -57,7 +56,7 @@ export function Navbar() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-[var(--shadow-glow)]">
               <Sparkles className="h-4 w-4" />
             </span>
-            <span className="hidden sm:inline">Aarav<span className="text-gradient">.dev</span></span>
+            <span className="hidden sm:inline">Mahamuda<span className="text-gradient"> Afroz</span></span>
           </button>
 
           <div className="hidden items-center gap-1 lg:flex">
@@ -85,13 +84,6 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={toggle}
-              aria-label="Toggle theme"
-              className="grid h-10 w-10 place-items-center rounded-xl glass border border-border text-foreground transition-colors hover:border-primary/40"
-            >
-              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
             <button
               onClick={() => go("contact")}
               className="hidden rounded-xl bg-gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-105 sm:block"

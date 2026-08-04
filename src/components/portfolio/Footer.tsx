@@ -19,11 +19,14 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <button onClick={() => scrollToId("home")} className="flex items-center gap-2 font-display text-lg font-bold">
+            <button
+              onClick={() => scrollToId("home")}
+              className="flex items-center gap-2 font-display text-lg font-bold"
+            >
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
                 <Sparkles className="h-4 w-4" />
               </span>
-              Aarav<span className="text-gradient">.dev</span>
+              Mahamuda<span className="text-gradient">Afroz</span>
             </button>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               {profile.tagline} Let's turn your next idea into a premium, production-ready product.
@@ -31,7 +34,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold uppercase tracking-wider">Navigation</h4>
+            <h4 className="font-display text-sm font-semibold uppercase tracking-wider">
+              Navigation
+            </h4>
             <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
               {navLinks.map((l, i) => (
                 <motion.li
@@ -71,10 +76,10 @@ export function Footer() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
-                  whileHover={{ y: -4, scale: 1.1 }}
-                  whileTap={{ scale: 0.92 }}
-                  className={`grid h-10 w-10 place-items-center rounded-xl glass border border-border text-muted-foreground shadow-[var(--shadow-glow)] transition-colors ${
-                    SOCIAL_HOVER[i % SOCIAL_HOVER.length]
+                  whileHover={{ y: -4, scale: 1.05 }}
+                  whileTap={{ scale: 0.94 }}
+                  className={`grid h-10 w-10 place-items-center rounded-xl glass border border-accent/30 text-muted-foreground social-animate ${
+                    i % 2 === 0 ? "social-float" : ""
                   }`}
                 >
                   <s.icon className="h-4 w-4" />
@@ -86,7 +91,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Blueprint. All rights reserved.
+            © {new Date().getFullYear()} Mahamuda Afroz. All rights reserved.
           </p>
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

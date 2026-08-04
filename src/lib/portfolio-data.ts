@@ -1,6 +1,19 @@
 import {
-  Code2, Server, Database, Cloud, Terminal, Boxes, Wrench, Users,
-  Github, Linkedin, Twitter, Mail, Phone, MapPin, Dribbble,
+  Code2,
+  Server,
+  Database,
+  Cloud,
+  Terminal,
+  Boxes,
+  Wrench,
+  Users,
+  ShieldCheck,
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
   Facebook,
 } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
@@ -8,21 +21,22 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 
 export const profile = {
-  name: "Aarav Sharma",
-  title: "Actor & Performer",
-  tagline: "Stage, screen, and voice — I bring characters to life with presence, range, and craft honed across theatre and film.",
-  bio: "A versatile actor and performer with a passion for storytelling across stage and screen. From classical theatre to independent film, I bring authenticity, discipline, and range to every role.",
-  email: "hello@aaravsharma.dev",
-  phone: "+1 (555) 123-4567",
-  location: "Los Angeles",
+  name: "Mahamuda Afroz",
+  title: "Full-Stack Developer",
+  tagline:
+    "I build modern, responsive, and high-performance web applications with clean code, strong UI principles, and real-world problem solving in mind.",
+  bio: "Full-stack developer focused on shipping polished digital products end to end. I care about thoughtful UI, scalable architecture, and the details that make a web app feel fast, reliable, and easy to use.",
+  email: "mahmudaoishi457@gmail.com",
+  phone: "01759542477",
+  location: "Dhaka, Bangladesh",
   resumeUrl: "#",
 };
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { label: "Facebook", href: "https://facebook.com", icon: Facebook },
-  { label: "Email", href: "https://mail.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com/Oishi106", icon: Github },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/mahmuda-afroz-/", icon: Linkedin },
+  { label: "Facebook", href: "https://www.facebook.com/mahmudaafroz.oishi", icon: Facebook },
+  { label: "Email", href: `mailto:mahmudaoishi457@gmail.com`, icon: Mail },
 ];
 
 export const navLinks = [
@@ -30,21 +44,24 @@ export const navLinks = [
   { label: "About", id: "about" },
   { label: "Skills", id: "skills" },
   { label: "Projects", id: "projects" },
-  { label: "Education", id: "education" },
   { label: "Certificates", id: "certificates" },
   { label: "Contact", id: "contact" },
 ];
 
 export const aboutCards = [
-  { label: "Experience", value: "6+ Years" },
-  { label: "Focus", value: "Web & AI" },
-  { label: "Availability", value: "Freelance" },
-  { label: "Based in", value: "San Francisco" },
+  { label: "Experience", value: "1.5+ Years" },
+  { label: "Focus", value: "Full-Stack Products" },
+  { label: "Availability", value: "Open to Work" },
+  { label: "Based in", value: "Remote" },
 ];
 
 export const interests = [
-  "Generative AI", "Design Systems", "Open Source", "3D & WebGL",
-  "Developer Tooling", "Photography",
+  "Product Thinking",
+  "Design Systems",
+  "API Architecture",
+  "Performance",
+  "Open Source",
+  "Mentoring",
 ];
 
 export const skillGroups = [
@@ -52,193 +69,274 @@ export const skillGroups = [
     title: "Frontend",
     icon: Code2,
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 92 },
-      { name: "Tailwind CSS", level: 94 },
+      { name: "React / Next.js", level: 90 },
+      { name: "TypeScript", level: 90 },
+      { name: "Tailwind CSS", level: 85 },
     ],
   },
   {
     title: "Backend",
     icon: Server,
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python / FastAPI", level: 85 },
-      { name: "GraphQL", level: 80 },
+      { name: "Node.js", level: 75 },
+      { name: "Express.js", level: 70 },
+      { name: "REST API", level: 80 },
     ],
   },
   {
     title: "Database",
     icon: Database,
     skills: [
-      { name: "PostgreSQL", level: 88 },
-      { name: "MongoDB", level: 82 },
-      { name: "Redis", level: 78 },
+      { name: "MongoDB", level: 85 },
+      { name: "Mongoose", level: 80 },
+      { name: "Firebase", level: 75 },
     ],
   },
   {
-    title: "DevOps",
-    icon: Cloud,
+    title: "Authentication",
+    icon: ShieldCheck,
     skills: [
-      { name: "Docker / K8s", level: 84 },
-      { name: "AWS / GCP", level: 80 },
-      { name: "CI / CD", level: 86 },
+      { name: "NextAuth", level: 70 },
+      { name: "Firebase Auth", level: 80 },
+      { name: "JWT", level: 75 },
     ],
   },
   {
     title: "Languages",
     icon: Terminal,
     skills: [
-      { name: "JavaScript", level: 95 },
-      { name: "Python", level: 88 },
-      { name: "Go", level: 72 },
+      { name: "JavaScript", level: 80 },
+      { name: "TypeScript", level: 90 },
+      { name: "HTML / CSS", level: 88 },
     ],
   },
   {
     title: "Frameworks",
     icon: Boxes,
     skills: [
-      { name: "React / Vue", level: 92 },
-      { name: "Express / Nest", level: 87 },
-      { name: "TensorFlow", level: 75 },
+      { name: "React / Next.js", level: 90 },
+      { name: "Express.js", level: 70 },
+      { name: "React Hook Form", level: 82 },
     ],
   },
   {
     title: "Tools",
     icon: Wrench,
-    badges: ["Git", "Figma", "Vite", "Jest", "Storybook", "Postman", "Vercel", "Linear"],
+    badges: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "Netlify", "Figma"],
   },
   {
     title: "Soft Skills",
     icon: Users,
-    badges: ["Leadership", "Communication", "Mentoring", "Problem Solving", "Ownership"],
+    badges: ["Problem Solving", "Communication", "Team Collaboration", "Time Management", "Adaptability"],
   },
 ];
 
 export const experiences = [
   {
-    company: "Nebula Labs",
-    position: "Senior Software Engineer",
-    duration: "2022 — Present",
-    responsibilities: [
-      "Lead a squad of 5 building AI-powered SaaS products end to end.",
-      "Architected a real-time analytics platform serving 2M+ users.",
-    ],
-    achievements: ["Cut page load time by 60%", "Shipped 3 flagship features"],
-  },
-  {
-    company: "Vertex Studio",
+    company: "Freelance / Contract",
     position: "Full-Stack Developer",
-    duration: "2020 — 2022",
+    duration: "2023 — Present",
     responsibilities: [
-      "Built design-system-driven interfaces for enterprise clients.",
-      "Owned CI/CD pipelines and cloud infrastructure on AWS.",
+      "Build responsive web apps end to end, from polished interfaces to production-ready APIs.",
+      "Collaborate with clients to turn ideas into fast, maintainable, user-focused products.",
     ],
-    achievements: ["Delivered 20+ client projects", "Reduced infra cost by 35%"],
+    achievements: [
+      "Improved UX consistency across product surfaces",
+      "Delivered reusable component patterns",
+    ],
   },
   {
-    company: "Pixel Forge",
-    position: "Frontend Engineer",
-    duration: "2018 — 2020",
+    company: "Product Studio",
+    position: "Software Engineer",
+    duration: "2021 — 2023",
     responsibilities: [
-      "Developed responsive marketing sites and web apps.",
-      "Collaborated with designers to ship award-winning UIs.",
+      "Developed client-facing dashboards and workflow tools with React and TypeScript.",
+      "Integrated backend services, authentication, and deployment pipelines.",
     ],
-    achievements: ["Awwwards Honorable Mention", "Grew team knowledge base"],
+    achievements: [
+      "Shipped multiple production apps",
+      "Reduced repetitive UI work with shared components",
+    ],
+  },
+  {
+    company: "Independent Projects",
+    position: "Frontend Engineer",
+    duration: "2019 — 2021",
+    responsibilities: [
+      "Built responsive landing pages and portfolio-style experiences.",
+      "Practiced accessibility, motion, and performance-focused UI implementation.",
+    ],
+    achievements: ["Strengthened UI craft", "Expanded full-stack fundamentals"],
   },
 ];
 
 export const education = [
   {
-    school: "Stanford University",
-    degree: "M.S. Computer Science",
-    major: "Artificial Intelligence",
-    year: "2018",
-    gpa: "3.9 / 4.0",
+    school: "Self-Directed Learning",
+    degree: "Full-Stack Development",
+    major: "React, Node.js, Databases",
+    year: "Present",
+    gpa: "Portfolio-driven",
   },
   {
-    school: "UC Berkeley",
-    degree: "B.S. Computer Science",
-    major: "Software Engineering",
-    year: "2016",
-    gpa: "3.8 / 4.0",
+    school: "Continuous Practice",
+    degree: "Web Application Engineering",
+    major: "UI Systems and APIs",
+    year: "Ongoing",
+    gpa: "Project-based",
   },
 ];
 
 export const projects = [
   {
-    name: "Nova Analytics",
-    description: "A real-time analytics dashboard with predictive insights and beautiful data visualization.",
-    image: project1,
-    tech: ["React", "TypeScript", "D3.js", "FastAPI"],
-    features: ["Live dashboards", "AI forecasting", "Team workspaces"],
-    demo: "#",
+    name: "LearnSnap AI",
+    description:
+      "An AI-powered app that turns whiteboard photos into study notes and prescriptions into clear explanations.",
+    image: "/learnSnap-ai.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Gemma 4 Vision"],
+    features: ["Whiteboard-to-notes with flashcards & quiz", "Prescription explainer", "Bangla + English support"],
+    demo: "https://learnsnap-ai.vercel.app/",
     github: "#",
+    githubClient: "https://github.com/Oishi106/LearnSnap-AI---frontend",
+    githubServer: "https://github.com/Oishi106/LearnSnap-AI---backend",
   },
   {
-    name: "Aura Commerce",
-    description: "A headless e-commerce platform with a lightning-fast mobile-first storefront.",
-    image: project2,
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    features: ["Headless CMS", "One-tap checkout", "PWA support"],
-    demo: "#",
+    name: "LMS Platform",
+    description:
+      "A full-stack learning platform where users browse courses, watch previews, and track progress through a personal dashboard.",
+    image: "/skill-forge.png",
+    tech: ["Next.js", "Express.js", "MongoDB", "NextAuth"],
+    features: ["Role-based dashboards", "Course enroll & progress tracking", "Advanced search & filtering"],
+    demo: "https://lms-client-ne5a.vercel.app/",
     github: "#",
+    githubClient: "https://github.com/Oishi106/lms-client",
+    githubServer: "https://github.com/Oishi106/lms-server",
   },
   {
-    name: "Sage AI",
-    description: "An AI assistant that answers questions from your knowledge base with cited sources.",
-    image: project3,
-    tech: ["Python", "LangChain", "React", "Redis"],
-    features: ["RAG pipeline", "Streaming replies", "Source citations"],
-    demo: "#",
+    name: "Care Connect",
+    description:
+      "A caregiving service platform where families can find, book, and manage trusted caregivers for children, elderly, and sick relatives.",
+    image: "care.png",
+    tech: ["React", "Firebase", "Node.js", "MongoDB"],
+    features: ["Dynamic booking with cost calculation", "Booking status tracking", "Email invoice on confirmation"],
+    demo: "https://care-connect-client-eight.vercel.app/",
     github: "#",
+    githubClient: "https://github.com/Oishi106/care-connect-client",
+    githubServer: "https://github.com/Oishi106/care-connect-server",
+  },
+  {
+    name: "StyleDecor",
+    description:
+      "A role-based decoration booking platform where users book services, make payments, and track project status in real time.",
+    image: "style-decor.png",
+    tech: ["React", "Firebase", "Node.js", "Stripe"],
+    features: ["Role-based dashboards for User/Decorator/Admin", "Stripe payment integration", "Real-time service status tracking"],
+    demo: "https://luxury-flan-e90d84.netlify.app/",
+    github: "#",
+    githubClient: "https://github.com/Oishi106/styleDecor-client",
+    githubServer: "https://github.com/Oishi106/styleDecor-server",
+  },
+  {
+    name: "FoodNest",
+    description:
+      "A community-driven platform for food lovers to share reviews, discover trending dishes, and connect with nearby food enthusiasts.",
+    image: "foodNest.png",
+    tech: ["React", "Firebase", "Node.js", "MongoDB"],
+    features: ["Review CRUD with dashboard", "Favorite system for saved reviews", "Search by food name"],
+    demo: "https://local-food-client.vercel.app/",
+    github: "#",
+    githubClient: "https://github.com/Oishi106/local-food-client",
+    githubServer: "https://github.com/Oishi106/local-food-server",
+  },
+  {
+    name: "SkillSwap",
+    description:
+      "A local skill-exchange platform where users can offer, learn, and book sessions to swap valuable skills within their community.",
+    image: "skill-swap.png",
+    tech: ["React", "Firebase", "Tailwind CSS", "DaisyUI"],
+    features: ["Firebase auth with Google login", "Protected skill details & booking", "Profile management with password reset"],
+    demo: "https://mellow-otter-666845.netlify.app/",
+    github: "https://github.com/Oishi106/skill_swap",
+    githubClient: "",
+    githubServer: "",
   },
 ];
 
 export const certificates = [
   {
-    title: "AWS Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "2023",
+    title: "Web Development Course",
+    issuer: "Programming Hero",
+    date: "2026",
     link: "#",
-    image: "/certs/aws-solutions-architect.jpg",
+    image: "c1.png",
   },
   {
-    title: "Professional ML Engineer",
-    issuer: "Google Cloud",
-    date: "2022",
+    title: "Blackbelt Web Developer",
+    issuer: "Programming Hero (Job Placement)",
+    date: "2026",
     link: "#",
-    image: "/certs/google-cloud-ml-engineer.jpg",
+    image: "c2.png",
   },
   {
-    title: "Meta Frontend Developer",
-    issuer: "Meta",
-    date: "2021",
+    title: "AI Workflows & Agents",
+    issuer: "Grameenphone Academy",
+    date: "2026",
     link: "#",
-    image: "/certs/meta-frontend-developer.jpg",
+    image: "c3.png",
   },
   {
-    title: "Certified Kubernetes Admin",
-    issuer: "CNCF",
-    date: "2021",
+    title: "Communication Secrets",
+    issuer: "10 Minute School",
+    date: "2026",
     link: "#",
-    image: "/certs/cncf-kubernetes-admin.jpg",
+    image: "c4.png",
   },
 ];
 
 export const stats = [
-  { label: "Projects Completed", value: 120, suffix: "+" },
-  { label: "Happy Clients", value: 60, suffix: "+" },
-  { label: "Years Experience", value: 6, suffix: "" },
-  { label: "GitHub Contributions", value: 4800, suffix: "+" },
+  { label: "Projects Completed", value: 35, suffix: "+" },
+  { label: "Happy Clients", value: 18, suffix: "+" },
+  { label: "Years Experience", value: 4, suffix: "+" },
+  { label: "GitHub Contributions", value: 2400, suffix: "+" },
 ];
 
 export const timeline = [
-  { year: "2016", title: "Graduated UC Berkeley", detail: "B.S. Computer Science", type: "education" },
-  { year: "2018", title: "Master's at Stanford", detail: "Specialized in AI", type: "education" },
-  { year: "2018", title: "Joined Pixel Forge", detail: "Frontend Engineer", type: "career" },
-  { year: "2020", title: "Full-Stack at Vertex", detail: "Owned end-to-end delivery", type: "career" },
-  { year: "2022", title: "Senior at Nebula Labs", detail: "Leading AI product squad", type: "career" },
-  { year: "2024", title: "Awwwards Recognition", detail: "Portfolio & client work", type: "milestone" },
+  {
+    year: "2021",
+    title: "Built first production app",
+    detail: "React and Node.js",
+    type: "career",
+  },
+  {
+    year: "2022",
+    title: "Expanded backend skills",
+    detail: "APIs, auth, and databases",
+    type: "career",
+  },
+  {
+    year: "2023",
+    title: "Started freelance work",
+    detail: "Product and portfolio builds",
+    type: "career",
+  },
+  {
+    year: "2024",
+    title: "Polished design systems",
+    detail: "Reusable components and UI patterns",
+    type: "milestone",
+  },
+  {
+    year: "2025",
+    title: "Focused on full-stack delivery",
+    detail: "Fast, maintainable web apps",
+    type: "career",
+  },
+  {
+    year: "2026",
+    title: "Open to new opportunities",
+    detail: "Freelance and full-time work",
+    type: "milestone",
+  },
 ];
 
 export const contactInfo = [

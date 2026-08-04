@@ -115,9 +115,9 @@ export function CursorBubble() {
         p.life *= 0.9;
         const r = 10 * p.life;
         const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
-        grad.addColorStop(0, `rgba(247, 220, 111, ${0.55 * p.life})`);
-        grad.addColorStop(0.5, `rgba(240, 201, 74, ${0.25 * p.life})`);
-        grad.addColorStop(1, "rgba(247, 220, 111, 0)");
+        grad.addColorStop(0, `rgba(0, 230, 255, ${0.55 * p.life})`);
+        grad.addColorStop(0.5, `rgba(0, 180, 255, ${0.25 * p.life})`);
+        grad.addColorStop(1, "rgba(0, 230, 255, 0)");
         ctx.fillStyle = grad;
         ctx.beginPath();
         ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
@@ -125,7 +125,7 @@ export function CursorBubble() {
       }
       // connecting shimmer line
       if (trail.length > 1) {
-        ctx.strokeStyle = "rgba(247, 220, 111, 0.35)";
+        ctx.strokeStyle = "rgba(0, 230, 255, 0.25)";
         ctx.lineWidth = 1;
         ctx.beginPath();
         for (let i = 0; i < trail.length; i++) {
@@ -171,8 +171,8 @@ export function CursorBubble() {
         aria-hidden
         className="pointer-events-none fixed left-0 top-0 z-[99] h-32 w-32 rounded-full opacity-90 transition-opacity duration-300"
         style={{
-          background:
-            "radial-gradient(circle, rgba(247,220,111,0.28) 0%, rgba(247,220,111,0.08) 40%, transparent 70%)",
+            background:
+            "radial-gradient(circle, rgba(0,230,255,0.28) 0%, rgba(0,230,255,0.08) 40%, transparent 70%)",
           filter: "blur(6px)",
         }}
       />
@@ -182,16 +182,16 @@ export function CursorBubble() {
         aria-hidden
         className="pointer-events-none fixed left-0 top-0 z-[100] h-11 w-11 rounded-full transition-[opacity] duration-200"
         style={{
-          border: "1.5px dashed rgba(247, 220, 111, 0.85)",
+          border: "1.5px dashed rgba(0, 230, 255, 0.85)",
           boxShadow:
-            "0 0 18px rgba(247,220,111,0.35), inset 0 0 12px rgba(247,220,111,0.15)",
+            "0 0 18px rgba(0,230,255,0.35), inset 0 0 12px rgba(0,230,255,0.15)",
         }}
       >
         <span
           className="absolute inset-[3px] rounded-full"
           style={{
             background:
-              "conic-gradient(from 0deg, rgba(247,220,111,0) 0deg, rgba(247,220,111,0.55) 90deg, rgba(247,220,111,0) 180deg, rgba(247,220,111,0.55) 270deg, rgba(247,220,111,0) 360deg)",
+              "conic-gradient(from 0deg, rgba(0,230,255,0) 0deg, rgba(0,230,255,0.55) 90deg, rgba(0,230,255,0) 180deg, rgba(0,230,255,0.55) 270deg, rgba(0,230,255,0) 360deg)",
             WebkitMask:
               "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px))",
             mask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px))",
@@ -203,7 +203,7 @@ export function CursorBubble() {
         ref={dotRef}
         aria-hidden
         className="pointer-events-none fixed left-0 top-0 z-[101] h-2.5 w-2.5 rounded-full bg-accent transition-[transform] duration-100"
-        style={{ boxShadow: "0 0 14px rgba(247,220,111,0.95), 0 0 30px rgba(247,220,111,0.5)" }}
+        style={{ boxShadow: "0 0 14px rgba(0,230,255,0.95), 0 0 30px rgba(0,230,255,0.5)" }}
       />
       {/* Optional label chip (data-cursor-label="…") */}
       <div

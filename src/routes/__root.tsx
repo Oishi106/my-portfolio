@@ -75,29 +75,29 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },                 
+      { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Portfolio" },              
+      { title: "Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Aarav Sharma, a software engineer crafting premium web apps and AI products. Explore projects, skills, experience, and get in touch.",
+          "Portfolio of Mahamuda Afroz, a full-stack developer crafting modern web apps with clean UI and practical engineering. Explore projects, skills, experience, and get in touch.",
       },
-      { name: "author", content: "Aarav Sharma" },
+      { name: "author", content: "Mahamuda Afroz" },
       { name: "theme-color", content: "#2c3e50" },
-      { property: "og:title", content: "Aarav Sharma — Software Engineer & AI Developer" },
+      { property: "og:title", content: "Mahamuda Afroz — Full-Stack Developer" },
       {
         property: "og:description",
         content:
           "Premium portfolio showcasing full-stack projects, skills, and experience. Let's build something exceptional.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Aarav Sharma" },
+      { property: "og:site_name", content: "Mahamuda Afroz" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Aarav Sharma — Software Engineer & AI Developer" },
+      { name: "twitter:title", content: "Mahamuda Afroz — Full-Stack Developer" },
       {
         name: "twitter:description",
-        content: "Premium portfolio of a software engineer & AI developer.",
+        content: "Premium portfolio of a full-stack developer.",
       },
     ],
     links: [
@@ -117,7 +117,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
@@ -136,7 +135,6 @@ function RootShell({ children }: { children: ReactNode }) {
     </html>
   );
 }
-
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
