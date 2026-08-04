@@ -63,12 +63,6 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
-
-*<img width="537" height="897" alt="Portfolio Screenshot" src="https://github.com/user-attachments/assets/95805989-285c-4342-8a12-171abe06c2a1" />*
-
----
-
 ## 📬 Contact
 
 * GitHub: https://github.com/Oishi106
