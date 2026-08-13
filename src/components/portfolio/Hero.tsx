@@ -85,6 +85,8 @@ export function Hero() {
           <motion.div variants={itemVariants} className="mt-8 flex flex-wrap items-center gap-4">
             <motion.a
               href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
               whileHover={{ y: -3, scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 rounded-2xl border-2 border-accent px-6 py-3.5 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"

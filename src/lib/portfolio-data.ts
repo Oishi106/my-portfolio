@@ -29,7 +29,7 @@ export const profile = {
   email: "mahmudaoishi457@gmail.com",
   phone: "01759542477",
   location: "Dhaka, Bangladesh",
-  resumeUrl: "#",
+  resumeUrl: "https://drive.google.com/file/d/1Z5chFVjS8eRYTB53o1O4WvmGXknateOO/view?usp=sharing",
 };
 
 export const socials = [
